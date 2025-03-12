@@ -1,0 +1,17 @@
+let startTime = datetime_add('hour',-1, endTime);
+AzureActivity
+| where ingestion_time() between(startTime .. endTime)
+| project 
+    TimeGenerated,
+    OperationNameValue,
+    ActivityStatusValue,
+    Level,
+    Caller,
+    ResourceGroup,
+    ResourceProviderValue,
+    SubscriptionId,
+    CallerIpAddress,
+    ResourceId = _ResourceId,
+    Type,
+    EventDataId,
+    SourceSystem
