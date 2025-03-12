@@ -2,7 +2,7 @@
 Terraform code for configuring logs forwarding from the Cloud to Splunk for different Cloud providers.
 
 # Warning
-For each procider, configure the variables you want.
+For each provider, configure the variables you want.
 
 # AWS
 The code ships CloudTrail logs to a S3 and notifies an SNS to which is subscribed a SQS queue. The code outputs the key ID and secret needed to configure in Splunk.
